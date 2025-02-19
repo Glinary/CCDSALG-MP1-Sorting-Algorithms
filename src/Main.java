@@ -36,6 +36,12 @@ public class Main {
     // Asking user for number of iterations K
     System.out.print("Enter k: ");
     int k = numScanner.nextInt();
+
+    System.out.println("Select Alphabet Patterns:");
+    System.out.println("1 - DNA (A, C, G, T)");
+    System.out.println("2 - Amino Acids (Protein Sequences)");
+    System.out.println("3 - Binary (0, 1)");
+    int a = numScanner.nextInt();
     
     numScanner.close();
 
@@ -43,9 +49,18 @@ public class Main {
     BubbleSort bubbleSort = new BubbleSort();
     MergeSort mergeSort = new MergeSort();
 
+    switch (a) {
+      case 1: genRanStr.setAlphabetProvider(new AlphabetProviderDNA());
+      break;
+      case 2: genRanStr.setAlphabetProvider(new AlphabetProviderAminoAcid());
+      break;
+      case 3: genRanStr.setAlphabetProvider(new AlphabetProviderBinary());
+      break;
+    } 
+
     for (int i = 0; i < k; i++) {
       // Use GenRanStr to generate random suffixes
-      String[] suffixArray = genRanStr.getAlphabet(n);
+      String[] suffixArray = genRanStr.getSuffix(n);
 
       // Create clones of the generated suffix array for sorting
       String[] bubbleArray = suffixArray.clone();
