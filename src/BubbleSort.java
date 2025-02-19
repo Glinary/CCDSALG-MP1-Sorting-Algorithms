@@ -1,5 +1,9 @@
 public class BubbleSort extends SortingTemplate {
 
+       public BubbleSort() {
+        super("Bubble Sort");
+    }
+
     /**
     *This sorts the text array using bubble sort algorithm
     *
@@ -18,4 +22,6 @@ public class BubbleSort extends SortingTemplate {
             }
         }      
     }
+
+ 
 }

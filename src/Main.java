@@ -77,19 +77,9 @@ public class Main {
       System.out.println();
     }
         
-    printResults("Bubble Sort", bubbleSort);
-    printResults("Merge Sort", mergeSort);
+    bubbleSort.printResults();
+    mergeSort.printResults();
 
   }
 
-  private static void printResults(String sortType, SortingTemplate sorter) {
-    double best = sorter.getBestTime();
-    double worst = sorter.getWorstTime();
-    double avg = sorter.getAverageTime();
-    
-    System.out.println(sortType + " Results:");
-    System.out.printf("Best: %.3f ms\n", best);
-    System.out.printf("Worst: %.3f ms\n\n", worst);
-    System.out.printf("Average: %.3f ms\n\n", avg);
-  }
 }

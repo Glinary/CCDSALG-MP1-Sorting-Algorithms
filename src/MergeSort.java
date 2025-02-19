@@ -1,5 +1,10 @@
 public class MergeSort extends SortingTemplate {
 
+
+    public MergeSort() {
+        super("Merge Sort");
+    }
+
     /**
      * This calls the merge sort algorithm to sort the text array
      *
