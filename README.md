@@ -16,3 +16,13 @@ This project has been refactored to use the **Strategy Design Pattern** to impro
 4. **Encapsulation of Sorting Logic**: Sorting strategies can be easily swapped without modifying the main code structure.
 
 Using this approach, new sorting algorithms can be added with minimal code changes, following the **Open-Closed Principle (OCP)** in SOLID design principles.
+
+# How to run
+## Compile the code
+```
+javac BubbleSort.java GenRanStr.java Main.java MergeSort.java SortingTemplate.java
+```
+## Run the code
+```
+java Main
+```
